@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cactus-css.vercel.app/assets/css/cactus3.css"
+    />
+    <link rel="stylesheet" href="./static/style/extra.css" />
+    <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg" />
+    <link rel="icon" type="image/png" href="./static/images/favicon.png" />
+    <title>Arduino Smart Home</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="txt-center">
+        <h1>Arduino Smart Home</h1>
+        <p>Gestiona Tu Casa de Forma Remota.</p>
+      </header>
+      <section class="grid col-2 md-col-2 sm-col-1">
+        <section class="card white span-2">
+          <header>
+            <h2>Temperatura y Humedad.🌡️</h2>
+          </header>
+          <div class="flex" style="flex-wrap: wrap; gap: 15rem">
+            <article>
+              <p>
+                La Temperatura es: <br />
+                <span style="font-weight: bold">12</span> ℃
+              </p>
+            </article>
+            <article>
+              <p>
+                La Humedad actual es: <br />
+                <span style="font-weight: bold">12</span>
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="card white">
+          <header>
+            <h2>Luces 🔦</h2>
+          </header>
+          <ul style="padding: 0; margin: 0">
+            <li
+              class="flex"
+              style="justify-content: space-between; align-items: center"
+            >
+              Encender Luces
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </li>
+          </ul>
+        </section>
+        <section class="card white">
+          <header>
+            <h2>Puertas 🏠</h2>
+          </header>
+          <ul style="padding: 0; margin: 0">
+            <li
+              class="flex"
+              style="
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1em;
+              "
+            >
+              Abrir Puerta Principal
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </li>
+            <li
+              class="flex"
+              style="justify-content: space-between; align-items: center"
+            >
+              Abrir Garage
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
