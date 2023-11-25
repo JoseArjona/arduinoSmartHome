@@ -5,17 +5,17 @@
   display: inline-block;
   width: 3.5em;
   height: 2em;
- }
- 
- /* Hide default HTML checkbox */
- .switch input {
+}
+
+/* Hide default HTML checkbox */
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
- }
- 
- /* The slider */
- .slider {
+}
+
+/* The slider */
+.slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -25,9 +25,9 @@
   background-color: #ccc;
   transition: .4s;
   border-radius: 30px;
- }
- 
- .slider:before {
+}
+
+.slider:before {
   position: absolute;
   content: "";
   height: 1.4em;
@@ -37,20 +37,24 @@
   bottom: 0.3em;
   background-color: white;
   transition: .4s;
- }
- 
- input:checked + .slider {
-  background-color: rgb(0,221,80);
- }
- 
- input:focus + .slider {
-  box-shadow: 0 0 1px rgb(0,221,80);
- }
- 
- input:checked + .slider:before {
+}
+
+input:checked+.slider {
+  background-color: rgb(0, 221, 80);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px rgb(0, 221, 80);
+}
+
+input:checked+.slider:before {
   transform: translateX(1.5em);
- }
+}
 
- /* Puertas */
+/* Responsive  */
 
- 
+@media screen and (max-width: 992px) {
+  .flex {
+    gap: .3em !important;
+  }
+}

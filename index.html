@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./static/style/extra.css" />
     <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg" />
     <link rel="icon" type="image/png" href="./static/images/favicon.png" />
+    <script defer src="scripts/index.js"></script>
     <title>Arduino Smart Home</title>
   </head>
   <body>
@@ -19,8 +20,8 @@
         <h1>Arduino Smart Home</h1>
         <p>Gestiona Tu Casa de Forma Remota.</p>
       </header>
-      <section class="grid col-2 md-col-2 sm-col-1">
-        <section class="card white span-2">
+      <section class="grid col-2 md-col-1 sm-col-1">
+        <section class="card white span-2 md-span-2 sm-span-1">
           <header>
             <h2>Temperatura y Humedad.🌡️</h2>
           </header>
@@ -28,13 +29,13 @@
             <article>
               <p>
                 La Temperatura es: <br />
-                <span style="font-weight: bold">12</span> ℃
+                <span style="font-weight: bold" id="temp">12</span>°C
               </p>
             </article>
             <article>
               <p>
                 La Humedad actual es: <br />
-                <span style="font-weight: bold">12</span>
+                <span style="font-weight: bold" id="hum">12</span>
               </p>
             </article>
           </div>
@@ -46,11 +47,87 @@
           <ul style="padding: 0; margin: 0">
             <li
               class="flex"
+              style="
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.8em;
+              "
+            >
+              Encender Luz 1
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="luz1"
+                  onchange="turnLights('luz1')"
+                />
+                <span class="slider"></span>
+              </label>
+            </li>
+            <li
+              class="flex"
+              style="
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.8em;
+              "
+            >
+              Encender Luz 2
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="luz2"
+                  onchange="turnLights('luz2')"
+                />
+                <span class="slider"></span>
+              </label>
+            </li>
+            <li
+              class="flex"
+              style="
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.8em;
+              "
+            >
+              Encender Luz 3
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="luz3"
+                  onchange="turnLights('luz3')"
+                />
+                <span class="slider"></span>
+              </label>
+            </li>
+            <li
+              class="flex"
+              style="
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.8em;
+              "
+            >
+              Encender Luz 4
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  id="luz4"
+                  onchange="turnLights('luz4')"
+                />
+                <span class="slider"></span>
+              </label>
+            </li>
+            <li
+              class="flex"
               style="justify-content: space-between; align-items: center"
             >
-              Encender Luces
+              Encender Luz 5
               <label class="switch">
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  id="luz5"
+                  onchange="turnLights('luz5')"
+                />
                 <span class="slider"></span>
               </label>
             </li>
@@ -69,9 +146,9 @@
                 margin-bottom: 1em;
               "
             >
-              Abrir Puerta Principal
+              Puerta Principal
               <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" id="d1" onchange="doors('d1')" />
                 <span class="slider"></span>
               </label>
             </li>
@@ -79,9 +156,9 @@
               class="flex"
               style="justify-content: space-between; align-items: center"
             >
-              Abrir Garage
+              Garage
               <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" id="d2" onchange="doors('d2')" />
                 <span class="slider"></span>
               </label>
             </li>
