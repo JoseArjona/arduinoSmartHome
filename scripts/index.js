@@ -15,9 +15,10 @@ console.log('Hola Mundo')
 
 const turnLights = (id) => {
   const switchState = document.getElementById(id).checked;
-  console.log(switchState ? 'on' : 'off')
+  const status = switchState ? 'on' : 'off'
+  console.log(status)
   console.log(id)
-/*   fetch(`${serverURL}/light?${id}=${switchState}` , { method: 'POST' })
+/*   fetch(`${serverURL}/light?${id}=${status}` , { method: 'POST' })
     .then(response => response.text())
     .then(data =>  {
       console.log(data)
@@ -26,9 +27,10 @@ const turnLights = (id) => {
 
 const doors = (id) => {
   const switchState = document.getElementById(id).checked;
-  console.log(switchState ? 'open' : 'closed')
+  const status = switchState ? 'open' : 'closed'
+  console.log(status)
   console.log(id)
-/*   fetch(`${serverURL}/doors?${id}=${switchState}` , { method: 'POST' })
+/*   fetch(`${serverURL}/door?${id}=${status}` , { method: 'POST' })
     .then(response => response.text())
     .then(data =>  {
       console.log(data)
